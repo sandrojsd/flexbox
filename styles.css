@@ -46,6 +46,8 @@ header#main-header nav ul li {
   color: #667580;
   font-weight: bold;
   margin-right: 15px;
+  position: relative;
+  z-index: 1;
 }
 
 header#main-header nav ul li:first-child {
@@ -78,7 +80,7 @@ header#main-header div.side img{
 }
 
 header#main-header div.side button{
-  height: 36;
+  height: 36px;
   width: 90px;
   background: #3bb9e3;
   display: flex;
@@ -91,3 +93,93 @@ header#main-header div.side button{
   border: 0;
 
 }
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0 , 0.25);  
+}
+
+div.bar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 285px;
+  height: 100%;
+}
+
+
+div.bar .content ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+
+div.bar .content ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+}
+div.bar .content ul li.active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
+}
+
+
+div.bar .content ul li span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+div.bar .content ul li strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3;
+}
+
+div.bar .content .actions {
+  display: flex;
+  align-items: center;
+}
+
+div.bar .content .actions button {
+  height: 36px;
+  width: 90px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
+  margin-right: 16px;
+}
+
